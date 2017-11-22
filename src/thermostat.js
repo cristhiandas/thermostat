@@ -31,5 +31,9 @@ Thermostat.prototype = {
       this.maxTemperature =  25;
     }
     else{ this._maxTemperature = 32; }
+  },
+
+  reset: function(){
+    this._temperature = 20;
   }
 }
