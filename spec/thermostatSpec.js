@@ -25,6 +25,12 @@ beforeEach(function(){
       thermostat.down();
       expect(thermostat.temperature()).toEqual(10);
     })
+
+    it('return to deafult temperature after reset', function(){
+      thermostat.up();
+      thermostat.reset();
+      expect(thermostat.temperature()).toEqual(20);
+    })
   })
   describe("power saving mode",function(){
 
@@ -37,6 +43,7 @@ beforeEach(function(){
 
     it('have a maximum temperature of 32 when off', function(){
       thermostat.switch();
+
       for( var i = 1; i<20; i++){
         thermostat.up()
       }
