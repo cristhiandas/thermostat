@@ -28,7 +28,7 @@ Thermostat.prototype = {
 
   savingMode: function(){
     if (this._isOn === true ){
-      this.maxTemperature =  25;
+      this._maxTemperature =  25;
     }
     else{ this._maxTemperature = 32; }
   },

@@ -4,17 +4,18 @@
   <!-- include source files here... -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="../src/thermostat.js"></script>
+  <script src="../src/jquery.js"></script>
 
 </head>
 
 <body>
   Welcome to Thermostat.<br>
-  Current temperature:<br><br>
-  <button type="button" name='up'>Increase Temperature!</button>
-  <button type="button" name='down'>Decrease Temperature!</button>
-  <button type="button" name='reset'>Reset temperature!</button><br><br>
-  Saving mode:<br>
-  <button type="button" name='Switch'>Change usage mode!</button><br><br>
-  Usage:
+  Current temperature: <span id='temp'></span><br><br>
+  <button type="button" id='up'>Increase Temperature!</button>
+  <button type="button" id='down'>Decrease Temperature!</button>
+  <button type="button" id='reset'>Reset temperature!</button><br><br>
+  Saving mode: <span id='mode'></span> <br>
+  <button type="button" id='switch'>Change usage mode!</button><br><br>
+  Usage: <span id='usage'></span>
 </body>
 </html>
