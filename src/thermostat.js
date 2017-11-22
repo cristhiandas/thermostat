@@ -4,6 +4,10 @@ function Thermostat(){
 
 Thermostat.prototype = {
   temperature: function(){
-    return this._temperature
+    return this._temperature;
+  },
+  up: function(){
+    this._temperature++
   }
+
 }
