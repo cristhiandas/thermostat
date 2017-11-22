@@ -36,8 +36,7 @@ beforeEach(function(){
     })
 
     it('have a maximum temperature of 32 when off', function(){
-      this._isOn = false;
-      this.switch();
+      thermostat.switch();
       for( var i = 1; i<20; i++){
         thermostat.up()
       }
