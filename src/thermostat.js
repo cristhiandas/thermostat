@@ -35,5 +35,11 @@ Thermostat.prototype = {
 
   reset: function(){
     this._temperature = 20;
+  },
+
+  usage: function(){
+    if(this._temperature < 18){
+      return "low-usage"
+    }
   }
 }

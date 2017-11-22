@@ -55,7 +55,7 @@ beforeEach(function(){
   describe('current energy usage', function(){
     it('tells when low-usage', function(){
       for( var i = 1; i<6; i++){
-        thermostat.dow()
+        thermostat.down()
       }
       expect(thermostat.usage()).toEqual('low-usage')
     })
