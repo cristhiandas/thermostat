@@ -19,5 +19,11 @@ beforeEach(function(){
       thermostat.down();
       expect(thermostat.temperature()).toEqual(19);
     })
+
+    it('have a minimum of 10 degrees',function(){
+      thermostat._temperature = 10;
+      thermostat.down();
+      expect(thermostat.temperature()).toEqual(10);
+    })
   })
 })
