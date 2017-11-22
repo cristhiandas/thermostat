@@ -28,11 +28,20 @@ beforeEach(function(){
   })
   describe("power saving mode",function(){
 
-    it('have a maximum temperature of 25', function(){
+    it('have a maximum temperature of 25 when on', function(){
       for( var i = 1; i<10; i++){
         thermostat.up()
       }
       expect(thermostat.temperature()).toEqual(25)
+    })
+
+    it('have a maximum temperature of 32 when off', function(){
+      this._isOn = false;
+      this.switch();
+      for( var i = 1; i<20; i++){
+        thermostat.up()
+      }
+      expect(thermostat.temperature()).toEqual(32)
     })
 
   })
