@@ -64,7 +64,7 @@ beforeEach(function(){
       expect(thermostat.usage()).toEqual('medium-usage')
     })
 
-    it('tells when low-usage', function(){
+    it('tells when high-usage', function(){
       for( var i = 1; i<6; i++){
         thermostat.up()
       }
