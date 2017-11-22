@@ -26,4 +26,14 @@ beforeEach(function(){
       expect(thermostat.temperature()).toEqual(10);
     })
   })
+  describe("power saving mode",function(){
+
+    it('have a maximum temperature of 25', function(){
+      for( var i = 1; i<10; i++){
+        thermostat.up()
+      }
+      expect(thermostat.temperature()).toEqual(25)
+    })
+
+  })
 })
