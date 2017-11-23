@@ -15,21 +15,32 @@ $(document).ready(function(){
 
    $('#up').click(function(){
      thermostat.up();
-     update();
    })
 
    $('#down').click(function(){
      thermostat.down();
-     update();
    })
 
    $('#reset').click(function(){
      thermostat.reset();
-     update();
    })
 
    $('#switch').click(function(){
      thermostat.switch();
-     update();
    })
+
+  $(document).click(function() {
+    update();
+  });
+
+  $('#select').submit(function(event){
+    event.preventDefault();
+    var currentCity = $('#city').val();
+    $('#currentcity').html(currentCity);
+    $.get("http://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=metric&APPID=029834736f10a5ed0db464e2f28cddb9", function(data){
+      $('#outsideTemp').html(data.main.temp);
+    })
+  })
+
+
 });
