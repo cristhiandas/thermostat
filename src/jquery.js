@@ -36,10 +36,14 @@ $(document).ready(function(){
   $('#select').submit(function(event){
     event.preventDefault();
     var currentCity = $('#city').val();
-    $('#currentcity').html(currentCity);
     $.get("http://api.openweathermap.org/data/2.5/weather?q=" + currentCity + "&units=metric&APPID=029834736f10a5ed0db464e2f28cddb9", function(data){
+
       $('#outsideTemp').html(data.main.temp);
-    })
+      $('#currentcity').html(currentCity);
+    }).fail(function() {
+      $('#currentcity').html('City not found');
+      $('#outsideTemp').html('N/A');
+    });
   })
 
 
