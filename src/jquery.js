@@ -4,6 +4,8 @@ $(document).ready(function(){
   function update(){
     $('#temp').html(thermostat.temperature());
     $('#usage').html(thermostat.usage());
+    $('#usage').attr('class', thermostat.usage());
+
     $('#mode').html(function(){
       if(thermostat._isOn === true){
         return 'On';
@@ -32,6 +34,8 @@ $(document).ready(function(){
   $(document).click(function() {
     update();
   });
+
+
 
   $('#select').submit(function(event){
     event.preventDefault();
